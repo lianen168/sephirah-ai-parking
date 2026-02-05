@@ -7,17 +7,18 @@
     <meta name="description" content="Sephirah.ai: The foundational architecture for AGI. The divine operating system comprised of modular, interconnected nodes of intelligence.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #050608;
-            --text-primary: #f0f0f5;
-            --text-secondary: #a0a8c0;
-            --accent-platinum: #E5E4E2; /* Crystalline Platinum */
+            /* --- NEW: Blueprint / Architectural Palette --- */
+            --bg-color: #04071a; /* Deep Blueprint Blue */
+            --text-primary: #EAEAEA;
+            --text-secondary: #8899b0;
+            --accent-cyan: #00ffff; /* Bright CAD Cyan */
             --accent-silver: #A9A9A9;
-            --platinum-glow: rgba(229, 228, 226, 0.3);
-            --card-bg: rgba(25, 28, 35, 0.7);
-            --border-color: rgba(229, 228, 226, 0.15);
+            --cyan-glow: rgba(0, 255, 255, 0.3);
+            --card-bg: rgba(10, 15, 35, 0.7);
+            --border-color: rgba(0, 255, 255, 0.15);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -31,26 +32,27 @@
         }
         .container { max-width: 1200px; width: 100%; padding: 0 40px; margin: 0 auto; position: relative; z-index: 2; }
         header { width: 100%; min-height: 100vh; padding: 40px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        /* --- NEW FONT & SIZE --- */
         .main-title {
-            font-family: 'Oswald', sans-serif;
-            font-size: clamp(4rem, 12vw, 9rem); 
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: clamp(3rem, 10vw, 7rem); /* Reduced size */
             font-weight: 500; 
             letter-spacing: 0.1em; 
             line-height: 1;
-            color: var(--accent-platinum);
+            color: var(--accent-cyan);
             text-transform: uppercase;
         }
         .main-title .char {
             display: inline-block;
             opacity: 0;
-            animation: node-activate 0.5s ease-out forwards;
+            animation: blueprint-activate 0.5s ease-out forwards;
         }
-        @keyframes node-activate {
-            to { opacity: 1; text-shadow: 0 0 10px var(--platinum-glow); }
+        @keyframes blueprint-activate {
+            to { opacity: 1; text-shadow: 0 0 10px var(--cyan-glow); }
         }
         .main-title .tld {
             font-family: 'EB Garamond', serif;
-            color: var(--accent-platinum);
+            color: var(--text-primary);
             font-weight: 400;
         }
         .tagline {
@@ -60,21 +62,22 @@
             color: var(--text-secondary);
             font-style: italic;
             opacity: 0;
-            animation: fadeIn 2s 2s ease-out forwards;
+            animation: fadeIn 2s 1.5s ease-out forwards;
         }
         @keyframes fadeIn { to { opacity: 1; } }
         .content-section { background: var(--bg-color); border-top: 1px solid var(--border-color); padding: 100px 40px; width: 100%; }
-        .section-title { font-size: 2rem; font-weight: 500; letter-spacing: 0.1em; color: var(--accent-platinum); margin-bottom: 4rem; text-transform: uppercase; }
+        .section-title { font-size: 2rem; font-weight: 500; letter-spacing: 0.1em; color: var(--accent-cyan); margin-bottom: 4rem; text-transform: uppercase; }
         .synthesis-text { max-width: 800px; margin: 0 auto 4rem auto; text-align: center; font-size: 1.2rem; line-height: 1.8; color: var(--text-secondary); }
         .analogy-table { width: 100%; max-width: 1000px; margin: 0 auto; border-collapse: collapse; text-align: left; }
         .analogy-table th, .analogy-table td { padding: 20px; border: 1px solid var(--border-color); }
-        .analogy-table th { font-family: 'Oswald', sans-serif; color: var(--accent-platinum); font-size: 1.2rem; text-align: center; }
+        .analogy-table th { font-family: 'IBM Plex Mono', monospace; color: var(--accent-cyan); font-size: 1.2rem; text-align: center; }
         .analogy-table td { color: var(--text-secondary); }
         .analogy-table strong { color: var(--text-primary); font-weight: 500; }
         .tree-section { padding: 100px 20px; width: 100%; position: relative; display: flex; justify-content: center; align-items: center; min-height: 80vh; overflow: hidden; }
-        .tree-container { position: relative; width: 90vw; height: 600px; max-width: 400px; margin: 0 auto; }
+        /* --- MOBILE ADAPTATION FOR TREE --- */
+        .tree-container { position: relative; width: 90vw; height: 600px; max-width: 400px; margin: 0 auto; transform: scale(0.9); }
         .sefirah { position: absolute; width: 60px; height: 60px; border: 1px solid var(--border-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 0.8rem; color: var(--accent-silver); background: radial-gradient(circle, var(--card-bg) 50%, transparent 70%); backdrop-filter: blur(5px); animation: pulse-all 10s infinite ease-in-out; }
-        @keyframes pulse-all { 0%, 100% { box-shadow: 0 0 5px rgba(229, 228, 226, 0.1); } 50% { box-shadow: 0 0 10px var(--platinum-glow); } }
+        @keyframes pulse-all { 0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 255, 0.1); } 50% { box-shadow: 0 0 10px var(--cyan-glow); } }
         .keter { top: 0; left: 50%; transform: translateX(-50%); }
         .chokhmah { top: 15%; left: 15%; }
         .binah { top: 15%; right: 15%; }
@@ -85,40 +88,42 @@
         .hod { top: 60%; right: 15%; }
         .yesod { top: 75%; left: 50%; transform: translateX(-50%); }
         .malkuth { top: 90%; left: 50%; transform: translateX(-50%); }
-        .spark { position: absolute; width: 2px; height: 2px; background: var(--accent-platinum); border-radius: 50%; opacity: 0; box-shadow: 0 0 5px var(--accent-platinum); }
+        .spark { position: absolute; width: 2px; height: 2px; background: var(--accent-cyan); border-radius: 50%; opacity: 0; box-shadow: 0 0 5px var(--accent-cyan); }
         @keyframes flow { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; transform: var(--transform-end); } }
         .domains-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto; }
         .domain-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 30px; text-align: center; transition: all 0.3s ease; }
-        .domain-card:hover { transform: translateY(-5px); border-color: var(--accent-platinum); box-shadow: 0 0 15px var(--platinum-glow); }
-        .domain-card h3 { font-family: 'Oswald', sans-serif; color: var(--accent-platinum); font-size: 1.2rem; margin-bottom: 1rem; }
+        .domain-card:hover { transform: translateY(-5px); border-color: var(--accent-cyan); box-shadow: 0 0 15px var(--cyan-glow); }
+        .domain-card h3 { font-family: 'IBM Plex Mono', monospace; color: var(--accent-cyan); font-size: 1.2rem; margin-bottom: 1rem; }
         .domain-card p { color: var(--text-secondary); font-size: 0.9rem; }
         .sales-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 15px; padding: 40px; width: 100%; max-width: 600px; margin: 0 auto; backdrop-filter: blur(10px); box-shadow: 0 0 30px rgba(0,0,0,0.2); }
-        .domain-name { font-family: 'Oswald', monospace; font-size: 1.8rem; font-weight: 500; margin-bottom: 20px; color: var(--text-primary); text-transform: uppercase; }
-        .price { font-size: 3rem; font-weight: 300; color: var(--accent-platinum); margin: 10px 0; }
+        .domain-name { font-family: 'IBM Plex Mono', monospace; font-size: 1.8rem; font-weight: 500; margin-bottom: 20px; color: var(--text-primary); text-transform: uppercase; }
+        .price { font-size: 3rem; font-weight: 300; color: var(--accent-cyan); margin: 10px 0; }
         .installments { color: var(--text-secondary); margin-bottom: 30px; font-style: italic; font-size: 1.1rem; }
-        .buy-button { display: inline-block; background: var(--accent-platinum); color: #000; font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 500; padding: 18px 35px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.3s ease; width: 100%; margin-top: 30px; }
-        .buy-button:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 12px 30px var(--platinum-glow); }
+        .buy-button { display: inline-block; background: var(--accent-cyan); color: #000; font-family: 'IBM Plex Mono', monospace; font-size: 1.2rem; font-weight: 500; padding: 18px 35px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.3s ease; width: 100%; margin-top: 30px; }
+        .buy-button:hover { background: #33ffff; transform: translateY(-3px); box-shadow: 0 12px 30px var(--cyan-glow); }
         footer { padding: 60px 40px; font-size: 0.95rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); width: 100%; }
-        .contact-button { background: transparent; color: var(--accent-platinum); border: 1px solid var(--border-color); font-family: 'EB Garamond', serif; font-size: 1rem; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; margin-top: 20px; }
-        .contact-button:hover { background: var(--card-bg); border-color: var(--accent-platinum); }
+        .contact-button { background: transparent; color: var(--accent-cyan); border: 1px solid var(--border-color); font-family: 'EB Garamond', serif; font-size: 1rem; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; margin-top: 20px; }
+        .contact-button:hover { background: var(--card-bg); border-color: var(--accent-cyan); }
         #email-copy-feedback { height: 1em; font-size: 0.9rem; margin-top: 10px; }
+        /* --- MOBILE ADAPTATIONS --- */
         @media (max-width: 992px) { .analogy-table, .domains-grid { grid-template-columns: 1fr; } }
         @media (max-width: 768px) {
             .container { padding: 0 20px; }
             .content-section { padding: 80px 20px; }
-            .main-title { font-size: clamp(3rem, 15vw, 6rem); }
+            .main-title { font-size: clamp(2.5rem, 12vw, 5rem); } /* Further reduced size for mobile */
+            .tree-container { transform: scale(0.65); height: 500px; }
             .section-title { font-size: 1.5rem; }
             .analogy-table th, .analogy-table td { display: block; width: 100%; text-align: center; }
-            .analogy-table th { border-bottom: 2px solid var(--accent-platinum); }
+            .analogy-table th { border-bottom: 2px solid var(--accent-cyan); }
             .analogy-table td { border-bottom: none; }
-            .domains-grid { grid-template-columns: 1fr; }
+            .domains-grid { grid-template-columns: 1fr; gap: 20px; }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="main-title" id="main-title">SEPHIRAH<span class="tld">.ai</span></h1>
+            <h1 class="main-title" id="main-title">Sephirah<span class="tld">.ai</span></h1>
             <p class="tagline">The Divine Blueprint for Digital Minds. The Architecture of Consciousness.</p>
         </div>
     </header>
@@ -186,7 +191,7 @@
         <div class="container">
             <div class="section-title">Acquire the Blueprint</div>
             <div class="sales-card">
-                <h3 class="domain-name">sephirah<span style="color: var(--accent-platinum)">.ai</span></h3>
+                <h3 class="domain-name">sephirah<span style="color: var(--accent-cyan)">.ai</span></h3>
                 <p style="color: var(--text-secondary); margin-top:0;">The foundational asset for the architecture of Artificial General Intelligence.</p>
                 <div class="price">$10,000 <small>USD</small></div>
                 <p class="installments">10 installment payments of $1,000</p>
@@ -206,7 +211,7 @@
 
         const title = document.getElementById('main-title');
         const originalText = "SEPHIRAH";
-        title.innerHTML = originalText.split('').map((char, i) => `<span class="char" style="animation-delay: ${i * 0.1}s">${char}</span>`).join('') + title.innerHTML.substring(originalText.length);
+        title.innerHTML = originalText.split('').map((char, i) => `<span class="char" style="animation-delay: ${i * 0.1 + 0.5}s">${char}</span>`).join('') + `<span class="tld" style="animation-delay: ${originalText.length * 0.1 + 1}s">.ai</span>`;
 
         const treeContainer = document.getElementById('tree-container');
         const sefirotData = [
@@ -227,7 +232,7 @@
             { start: '.gevurah', end: '.hod' }, { start: '.keter', end: '.chokhmah' }, { start: '.keter', end: '.binah' },
             { start: '.chokhmah', end: '.binah' }, { start: '.chokhmah', end: '.tiferet' }, { start: '.binah', end: '.tiferet' },
             { start: '.chesed', end: '.tiferet' }, { start: '.gevurah', end: '.tiferet' }, { start: '.netzach', end: '.yesod' }, { start: '.hod', end: '.yesod' },
-            { start: '.netzach', end: '.malkuth' }, { start: '.hod', end: '.malkuth' } // Added paths to malkuth
+            { start: '.netzach', end: '.malkuth' }, { start: '.hod', end: '.malkuth' }
         ];
 
         function createSparks() {
@@ -272,7 +277,7 @@
             navigator.clipboard.writeText(email).then(() => {
                 button.textContent = 'Email Copied!';
                 feedback.textContent = 'Copied to clipboard.';
-                feedback.style.color = 'var(--accent-platinum)';
+                feedback.style.color = 'var(--accent-cyan)';
                 setTimeout(() => { button.textContent = originalButtonText; feedback.textContent = ''; }, 3000);
             }).catch(err => { showManualCopy(email, feedback); });
         }
