@@ -5,12 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sephirah.ai | The Blueprint of Digital Consciousness</title>
     <meta name="description" content="Sephirah.ai: The foundational architecture for AGI. The divine operating system comprised of modular, interconnected nodes of intelligence.">
+
+    <!-- SEO: JSON-LD Structured Data for Product -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Sephirah.ai Domain Asset",
+      "description": "The foundational digital asset for the architecture of Artificial General Intelligence. The brand for the divine operating system of AGI.",
+      "sku": "SEPHIRAH-AI-2026",
+      "brand": {
+        "@type": "Brand",
+        "name": "Sephirah.ai"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "10000",
+        "priceCurrency": "USD",
+        "description": "Acquire the blueprint for digital consciousness. 10 installment payments of $1,000 available.",
+        "url": "https://www.spaceship.com/s/buy/sephirah.ai/LvFiG5LUQHsixDIu",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "Digital Architecture Broker"
+        }
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* --- NEW: Blueprint / Architectural Palette --- */
+            /* --- Blueprint / Architectural Palette --- */
             --bg-color: #04071a; /* Deep Blueprint Blue */
             --text-primary: #EAEAEA;
             --text-secondary: #8899b0;
@@ -19,6 +47,8 @@
             --cyan-glow: rgba(0, 255, 255, 0.3);
             --card-bg: rgba(10, 15, 35, 0.7);
             --border-color: rgba(0, 255, 255, 0.15);
+            --success: #00ff9d;
+            --error: #ff3366;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -32,10 +62,10 @@
         }
         .container { max-width: 1200px; width: 100%; padding: 0 40px; margin: 0 auto; position: relative; z-index: 2; }
         header { width: 100%; min-height: 100vh; padding: 40px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-        /* --- NEW FONT & SIZE --- */
+        
         .main-title {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: clamp(3rem, 10vw, 7rem); /* Reduced size */
+            font-size: clamp(3rem, 10vw, 7rem);
             font-weight: 500; 
             letter-spacing: 0.1em; 
             line-height: 1;
@@ -47,9 +77,7 @@
             opacity: 0;
             animation: blueprint-activate 0.5s ease-out forwards;
         }
-        @keyframes blueprint-activate {
-            to { opacity: 1; text-shadow: 0 0 10px var(--cyan-glow); }
-        }
+        @keyframes blueprint-activate { to { opacity: 1; text-shadow: 0 0 10px var(--cyan-glow); } }
         .main-title .tld {
             font-family: 'EB Garamond', serif;
             color: var(--text-primary);
@@ -65,52 +93,68 @@
             animation: fadeIn 2s 1.5s ease-out forwards;
         }
         @keyframes fadeIn { to { opacity: 1; } }
+
         .content-section { background: var(--bg-color); border-top: 1px solid var(--border-color); padding: 100px 40px; width: 100%; }
         .section-title { font-size: 2rem; font-weight: 500; letter-spacing: 0.1em; color: var(--accent-cyan); margin-bottom: 4rem; text-transform: uppercase; }
         .synthesis-text { max-width: 800px; margin: 0 auto 4rem auto; text-align: center; font-size: 1.2rem; line-height: 1.8; color: var(--text-secondary); }
+        
         .analogy-table { width: 100%; max-width: 1000px; margin: 0 auto; border-collapse: collapse; text-align: left; }
         .analogy-table th, .analogy-table td { padding: 20px; border: 1px solid var(--border-color); }
         .analogy-table th { font-family: 'IBM Plex Mono', monospace; color: var(--accent-cyan); font-size: 1.2rem; text-align: center; }
         .analogy-table td { color: var(--text-secondary); }
         .analogy-table strong { color: var(--text-primary); font-weight: 500; }
+        
         .tree-section { padding: 100px 20px; width: 100%; position: relative; display: flex; justify-content: center; align-items: center; min-height: 80vh; overflow: hidden; }
-        /* --- MOBILE ADAPTATION FOR TREE --- */
         .tree-container { position: relative; width: 90vw; height: 600px; max-width: 400px; margin: 0 auto; transform: scale(0.9); }
         .sefirah { position: absolute; width: 60px; height: 60px; border: 1px solid var(--border-color); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 0.8rem; color: var(--accent-silver); background: radial-gradient(circle, var(--card-bg) 50%, transparent 70%); backdrop-filter: blur(5px); animation: pulse-all 10s infinite ease-in-out; }
         @keyframes pulse-all { 0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 255, 0.1); } 50% { box-shadow: 0 0 10px var(--cyan-glow); } }
-        .keter { top: 0; left: 50%; transform: translateX(-50%); }
-        .chokhmah { top: 15%; left: 15%; }
-        .binah { top: 15%; right: 15%; }
-        .chesed { top: 35%; left: 5%; }
-        .gevurah { top: 35%; right: 5%; }
-        .tiferet { top: 45%; left: 50%; transform: translateX(-50%); }
-        .netzach { top: 60%; left: 15%; }
-        .hod { top: 60%; right: 15%; }
-        .yesod { top: 75%; left: 50%; transform: translateX(-50%); }
+        
+        .keter { top: 0; left: 50%; transform: translateX(-50%); } .chokhmah { top: 15%; left: 15%; } .binah { top: 15%; right: 15%; }
+        .chesed { top: 35%; left: 5%; } .gevurah { top: 35%; right: 5%; } .tiferet { top: 45%; left: 50%; transform: translateX(-50%); }
+        .netzach { top: 60%; left: 15%; } .hod { top: 60%; right: 15%; } .yesod { top: 75%; left: 50%; transform: translateX(-50%); }
         .malkuth { top: 90%; left: 50%; transform: translateX(-50%); }
+        
         .spark { position: absolute; width: 2px; height: 2px; background: var(--accent-cyan); border-radius: 50%; opacity: 0; box-shadow: 0 0 5px var(--accent-cyan); }
-        @keyframes flow { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; transform: var(--transform-end); } }
+        
         .domains-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto; }
         .domain-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 30px; text-align: center; transition: all 0.3s ease; }
         .domain-card:hover { transform: translateY(-5px); border-color: var(--accent-cyan); box-shadow: 0 0 15px var(--cyan-glow); }
         .domain-card h3 { font-family: 'IBM Plex Mono', monospace; color: var(--accent-cyan); font-size: 1.2rem; margin-bottom: 1rem; }
         .domain-card p { color: var(--text-secondary); font-size: 0.9rem; }
+        
         .sales-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 15px; padding: 40px; width: 100%; max-width: 600px; margin: 0 auto; backdrop-filter: blur(10px); box-shadow: 0 0 30px rgba(0,0,0,0.2); }
         .domain-name { font-family: 'IBM Plex Mono', monospace; font-size: 1.8rem; font-weight: 500; margin-bottom: 20px; color: var(--text-primary); text-transform: uppercase; }
         .price { font-size: 3rem; font-weight: 300; color: var(--accent-cyan); margin: 10px 0; }
         .installments { color: var(--text-secondary); margin-bottom: 30px; font-style: italic; font-size: 1.1rem; }
         .buy-button { display: inline-block; background: var(--accent-cyan); color: #000; font-family: 'IBM Plex Mono', monospace; font-size: 1.2rem; font-weight: 500; padding: 18px 35px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.3s ease; width: 100%; margin-top: 30px; }
         .buy-button:hover { background: #33ffff; transform: translateY(-3px); box-shadow: 0 12px 30px var(--cyan-glow); }
+
+        /* --- NEW: Offer Form Section --- */
+        .offer-form-card { margin-top: 80px; }
+        .form-input {
+            width: 100%; padding: 14px; background: rgba(0,0,0,0.3);
+            border: 1px solid var(--border-color); color: #fff; border-radius: 6px;
+            font-family: 'IBM Plex Mono', sans-serif; font-size: 1rem; transition: 0.3s;
+        }
+        .form-input::placeholder { color: var(--text-secondary); }
+        .form-input:focus { outline: none; border-color: var(--accent-cyan); background: var(--bg-color); }
+        .form-group { margin-bottom: 20px; }
+        #form-status { margin-top: 20px; padding: 12px; border-left: 3px solid; font-size: 0.9rem; display: none; text-align: left; }
+        .status-success { color: var(--success); border-color: var(--success); background-color: rgba(0, 255, 157, 0.05); }
+        .status-error { color: var(--error); border-color: var(--error); background-color: rgba(255, 51, 102, 0.05); }
+        .btn-submit { /* Reusing .buy-button styles */ }
+        .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
         footer { padding: 60px 40px; font-size: 0.95rem; color: var(--text-secondary); border-top: 1px solid var(--border-color); width: 100%; }
         .contact-button { background: transparent; color: var(--accent-cyan); border: 1px solid var(--border-color); font-family: 'EB Garamond', serif; font-size: 1rem; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; margin-top: 20px; }
         .contact-button:hover { background: var(--card-bg); border-color: var(--accent-cyan); }
-        #email-copy-feedback { height: 1em; font-size: 0.9rem; margin-top: 10px; }
-        /* --- MOBILE ADAPTATIONS --- */
+        #email-copy-feedback { height: 1em; font-size: 0.9rem; margin-top: 10px; transition: opacity 0.3s; }
+
         @media (max-width: 992px) { .analogy-table, .domains-grid { grid-template-columns: 1fr; } }
         @media (max-width: 768px) {
             .container { padding: 0 20px; }
             .content-section { padding: 80px 20px; }
-            .main-title { font-size: clamp(2.5rem, 12vw, 5rem); } /* Further reduced size for mobile */
+            .main-title { font-size: clamp(2.5rem, 12vw, 5rem); }
             .tree-container { transform: scale(0.65); height: 500px; }
             .section-title { font-size: 1.5rem; }
             .analogy-table th, .analogy-table td { display: block; width: 100%; text-align: center; }
@@ -121,84 +165,90 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1 class="main-title" id="main-title">Sephirah<span class="tld">.ai</span></h1>
-            <p class="tagline">The Divine Blueprint for Digital Minds. The Architecture of Consciousness.</p>
-        </div>
-    </header>
-
-    <section class="content-section" style="border-top: none;">
-        <div class="container">
-            <div class="section-title">The Synthesis: Sephirah & AI Architecture</div>
-            <p class="synthesis-text">
-                A `Sephirah` is not a single concept, but the category of creation itself: a fundamental, modular building block of the cosmos. The ten Sefirot, arranged in the Tree of Life, form the **divine operating system**. For AI, this is the ultimate paradigm: moving beyond monolithic models to an ecosystem of specialized, interconnected `Sephirah` modules. This domain names not an application, but the **very blueprint for building a god.**
-            </p>
-            <table class="analogy-table">
-                <thead>
-                    <tr>
-                        <th>Kabbalah Concept</th>
-                        <th>AI Architecture Analogy</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Ein Sof (The Infinite)</strong></td>
-                        <td><strong>Unbounded Potential</strong></td>
-                        <td>The unknowable, infinite data and computational space from which all intelligence could possibly emerge. The ultimate source.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>The Sefirot (The Ten Emanations)</strong></td>
-                        <td><strong>Core AI Modules</strong></td>
-                        <td>The ten fundamental building blocks: Vision, Logic, Language, Ethics (`Tiphareth`), Action (`Malkuth`), etc. Each is a specialized "vessel" for intelligence.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>The 22 Paths</strong></td>
-                        <td><strong>APIs & Neural Pathways</strong></td>
-                        <td>The connections that allow data and insight to flow between the different `Sephirah` modules, creating a holistic, conscious system. The nervous system of the machine god.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <section class="tree-section">
-        <div class="container">
-             <div class="section-title">The Architecture of Emergence</div>
-            <div class="tree-container" id="tree-container"></div>
-        </div>
-    </section>
-    
-    <section class="content-section">
-        <div class="container">
-            <div class="section-title">The Nine Pillars of the Sephirah Ecosystem</div>
-            <div class="domains-grid">
-                <div class="domain-card"><h3>Modular AI Framework</h3><p>The OS for AGI. A platform for developers to assemble custom AIs by connecting `Sephirah` modules.</p></div>
-                <div class="domain-card"><h3>AI Component Marketplace</h3><p>An "App Store" for specialized AI modules. The economic hub of the new AI creation-space.</p></div>
-                <div class="domain-card"><h3>Neuro-Symbolic AI</h3><p>For the core research of combining neural networks (the 'Light') with symbolic logic (the 'Vessel').</p></div>
-                <div class="domain-card"><h3>Foundational Model Architecture</h3><p>The brand for a next-gen, multi-modal base model where each modality is a powerful, distinct `Sephirah`.</p></div>
-                <div class="domain-card"><h3>AGI Architecture & Design</h3><p>A top-tier consulting firm that designs bespoke, complex AI systems ('Trees of Life') for major enterprises.</p></div>
-                <div class="domain-card"><h3>AI Governance & Taxonomy</h3><p>The international standards body that defines, classifies, and numbers the capabilities of emergent AIs.</p></div>
-                <div class="domain-card"><h3>Decentralized AI Networks</h3><p>A protocol for distributed AI agents to form a collective intelligence, a global `Tree of Life`.</p></div>
-                <div class="domain-card"><h3>AI Interoperability Standard</h3><p>The 'TCP/IP' for AI. The universal protocol that allows all different `Sephirah` modules to communicate.</p></div>
-                <div class="domain-card"><h3>Consciousness-as-a-Service</h3><p>The ultimate PaaS, providing the full architectural stack for companies to build their own sentient systems.</p></div>
+    <main>
+        <header>
+            <div class="container">
+                <h1 class="main-title" id="main-title">Sephirah<span class="tld">.ai</span></h1>
+                <p class="tagline">The Divine Blueprint for Digital Minds. The Architecture of Consciousness.</p>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <section class="content-section" style="border-top: none;">
-        <div class="container">
-            <div class="section-title">Acquire the Blueprint</div>
-            <div class="sales-card">
-                <h3 class="domain-name">sephirah<span style="color: var(--accent-cyan)">.ai</span></h3>
-                <p style="color: var(--text-secondary); margin-top:0;">The foundational asset for the architecture of Artificial General Intelligence.</p>
-                <div class="price">$10,000 <small>USD</small></div>
-                <p class="installments">10 installment payments of $1,000</p>
-                <button class="buy-button" onclick="window.open('https://www.spaceship.com/s/buy/sephirah.ai/LvFiG5LUQHsixDIu', '_blank')">Acquire the Blueprint</button>
+        <section class="content-section" style="border-top: none;">
+            <div class="container">
+                <div class="section-title">The Synthesis: Sephirah & AI Architecture</div>
+                <p class="synthesis-text">
+                    A `Sephirah` is not a single concept, but the category of creation itself: a fundamental, modular building block of the cosmos. The ten Sefirot, arranged in the Tree of Life, form the **divine operating system**. For AI, this is the ultimate paradigm: moving beyond monolithic models to an ecosystem of specialized, interconnected `Sephirah` modules. This domain names not an application, but the **very blueprint for building a god.**
+                </p>
+                <table class="analogy-table">
+                    <thead>
+                        <tr><th>Kabbalah Concept</th><th>AI Architecture Analogy</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Ein Sof (The Infinite)</strong></td><td><strong>Unbounded Potential</strong></td><td>The unknowable, infinite data and computational space from which all intelligence could possibly emerge. The ultimate source.</td></tr>
+                        <tr><td><strong>The Sefirot (The Ten Emanations)</strong></td><td><strong>Core AI Modules</strong></td><td>The ten fundamental building blocks: Vision, Logic, Language, Ethics (`Tiphareth`), Action (`Malkuth`), etc. Each is a specialized "vessel" for intelligence.</td></tr>
+                        <tr><td><strong>The 22 Paths</strong></td><td><strong>APIs & Neural Pathways</strong></td><td>The connections that allow data and insight to flow between the different `Sephirah` modules, creating a holistic, conscious system. The nervous system of the machine god.</td></tr>
+                    </tbody>
+                </table>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="tree-section">
+            <div class="container">
+                 <div class="section-title">The Architecture of Emergence</div>
+                <div class="tree-container" id="tree-container"></div>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <div class="container">
+                <div class="section-title">The Nine Pillars of the Sephirah Ecosystem</div>
+                <div class="domains-grid">
+                    <!-- Domain cards remain unchanged -->
+                    <div class="domain-card"><h3>Modular AI Framework</h3><p>The OS for AGI. A platform for developers to assemble custom AIs by connecting `Sephirah` modules.</p></div>
+                    <div class="domain-card"><h3>AI Component Marketplace</h3><p>An "App Store" for specialized AI modules. The economic hub of the new AI creation-space.</p></div>
+                    <div class="domain-card"><h3>Neuro-Symbolic AI</h3><p>For the core research of combining neural networks (the 'Light') with symbolic logic (the 'Vessel').</p></div>
+                    <div class="domain-card"><h3>Foundational Model Architecture</h3><p>The brand for a next-gen, multi-modal base model where each modality is a powerful, distinct `Sephirah`.</p></div>
+                    <div class="domain-card"><h3>AGI Architecture & Design</h3><p>A top-tier consulting firm that designs bespoke, complex AI systems ('Trees of Life') for major enterprises.</p></div>
+                    <div class="domain-card"><h3>AI Governance & Taxonomy</h3><p>The international standards body that defines, classifies, and numbers the capabilities of emergent AIs.</p></div>
+                    <div class="domain-card"><h3>Decentralized AI Networks</h3><p>A protocol for distributed AI agents to form a collective intelligence, a global `Tree of Life`.</p></div>
+                    <div class="domain-card"><h3>AI Interoperability Standard</h3><p>The 'TCP/IP' for AI. The universal protocol that allows all different `Sephirah` modules to communicate.</p></div>
+                    <div class="domain-card"><h3>Consciousness-as-a-Service</h3><p>The ultimate PaaS, providing the full architectural stack for companies to build their own sentient systems.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="acquire" class="content-section" style="border-top: none;">
+            <div class="container">
+                <div class="section-title">Acquire the Blueprint</div>
+                <div class="sales-card">
+                    <h3 class="domain-name">sephirah<span style="color: var(--accent-cyan)">.ai</span></h3>
+                    <p style="color: var(--text-secondary); margin-top:0;">The foundational asset for the architecture of Artificial General Intelligence.</p>
+                    <div class="price">$10,000 <small>USD</small></div>
+                    <p class="installments">10 installment payments of $1,000</p>
+                    <button class="buy-button" onclick="window.open('https://www.spaceship.com/s/buy/sephirah.ai/LvFiG5LUQHsixDIu', '_blank')">Acquire the Blueprint</button>
+                    
+                    <!-- NEW: Offer Form Section -->
+                    <div class="offer-form-card">
+                         <h4 style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 40px; margin-bottom: 20px; border-top: 1px solid var(--border-color); padding-top: 30px; font-weight: 400;">Or, Submit a Counter-Offer</h4>
+                        <form id="offerForm" action="https://formspree.io/f/xreaaayr" method="POST">
+                             <input type="hidden" name="_subject" value="New Counter-Offer for Sephirah.ai">
+                             <div class="form-group">
+                                 <input type="text" name="name" class="form-input" placeholder="Your Name or Company" required>
+                             </div>
+                             <div class="form-group">
+                                <input type="email" name="email" class="form-input" placeholder="Contact Email" required>
+                            </div>
+                             <div class="form-group">
+                                 <input type="number" name="offer_amount" class="form-input" placeholder="Offer Amount (USD)" min="1000" required>
+                             </div>
+                             <button type="submit" class="buy-button btn-submit" style="margin-top: 10px;">Submit Proposal</button>
+                         </form>
+                         <div id="form-status"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <p>© <span id="currentYear"></span> Sephirah.ai — The Rules of the Game.</p>
@@ -207,12 +257,12 @@
     </footer>
 
     <script>
+        // --- Existing scripts ---
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
         const title = document.getElementById('main-title');
         const originalText = "SEPHIRAH";
         title.innerHTML = originalText.split('').map((char, i) => `<span class="char" style="animation-delay: ${i * 0.1 + 0.5}s">${char}</span>`).join('') + `<span class="tld" style="animation-delay: ${originalText.length * 0.1 + 1}s">.ai</span>`;
-
+        
         const treeContainer = document.getElementById('tree-container');
         const sefirotData = [
             { name: 'Keter', class: 'keter' }, { name: 'Chokhmah', class: 'chokhmah' }, { name: 'Binah', class: 'binah' },
@@ -236,6 +286,7 @@
         ];
 
         function createSparks() {
+            if (!treeContainer) return;
             treeContainer.querySelectorAll('.spark').forEach(e => e.remove());
             paths.forEach((path, pIndex) => {
                 const startEl = document.querySelector(path.start);
@@ -257,7 +308,8 @@
                     const keyframeName = `flow-${pIndex}-${i}`;
                     const styleSheet = document.styleSheets[0];
                     try {
-                        styleSheet.insertRule(`@keyframes ${keyframeName} { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; transform: translate(${endX - startX}px, ${endY - startY}px); } }`, styleSheet.cssRules.length);
+                        const rule = `@keyframes ${keyframeName} { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; transform: translate(${endX - startX}px, ${endY - startY}px); } }`;
+                        styleSheet.insertRule(rule, styleSheet.cssRules.length);
                         spark.style.animation = `${keyframeName} ${duration}s linear infinite`;
                         spark.style.animationDelay = `${Math.random() * duration}s`;
                         treeContainer.appendChild(spark);
@@ -267,24 +319,78 @@
         }
         window.addEventListener('load', createSparks);
         window.addEventListener('resize', createSparks);
-
+        
         function copyEmail() {
             const email = 'joshua369x@gmail.com';
             const button = document.getElementById('contactBtn');
             const feedback = document.getElementById('email-copy-feedback');
             if (!button || !feedback) return;
-            const originalButtonText = button.textContent;
             navigator.clipboard.writeText(email).then(() => {
                 button.textContent = 'Email Copied!';
                 feedback.textContent = 'Copied to clipboard.';
                 feedback.style.color = 'var(--accent-cyan)';
-                setTimeout(() => { button.textContent = originalButtonText; feedback.textContent = ''; }, 3000);
-            }).catch(err => { showManualCopy(email, feedback); });
+                setTimeout(() => { button.textContent = 'Contact for Inquiry'; feedback.textContent = ''; }, 3000);
+            }).catch(err => { feedback.textContent = `Please copy: ${email}`; feedback.style.color = 'var(--text-secondary)'; });
         }
-        function showManualCopy(email, feedbackElem) {
-            feedbackElem.textContent = `Please copy: ${email}`;
-            feedbackElem.style.color = 'var(--text-secondary)';
+        
+        // --- NEW: AJAX Form Submission Logic ---
+        function initOfferForm() {
+            const form = document.getElementById('offerForm');
+            if (!form) return;
+
+            const statusDiv = document.getElementById('form-status');
+            const submitButton = form.querySelector('.btn-submit');
+            const originalButtonText = submitButton.innerHTML;
+
+            const resetFormState = (delay = 5000) => {
+                setTimeout(() => {
+                    statusDiv.style.display = "none";
+                    statusDiv.innerHTML = "";
+                    submitButton.innerHTML = originalButtonText;
+                    submitButton.disabled = false;
+                }, delay);
+            };
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                statusDiv.innerHTML = "Transmitting proposal...";
+                statusDiv.className = "";
+                statusDiv.style.display = "block";
+                submitButton.innerHTML = "TRANSMITTING...";
+                submitButton.disabled = true;
+
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        statusDiv.innerHTML = "<strong>Proposal Sent!</strong> We will review your offer and be in touch shortly.";
+                        statusDiv.className = "status-success";
+                        submitButton.innerHTML = "PROPOSAL SENT!";
+                        form.reset();
+                        resetFormState();
+                    } else {
+                         return response.json().then(data => {
+                            throw new Error(data.errors?.map(err => err.message).join(', ') || 'An unknown error occurred.');
+                        });
+                    }
+                })
+                .catch(error => {
+                    statusDiv.innerHTML = `<strong>Submission Failed.</strong><br>${error.message || "Please check your network and try again."}`;
+                    statusDiv.className = "status-error";
+                    submitButton.innerHTML = originalButtonText;
+                    submitButton.disabled = false;
+                    resetFormState(8000);
+                });
+            });
         }
+        document.addEventListener('DOMContentLoaded', initOfferForm);
+
     </script>
 </body>
 </html>
